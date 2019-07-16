@@ -1,6 +1,6 @@
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 {% set name = "xrviz" %}
-{% set sha256 = "8ed6878d17a0168fae7353a41fd03c441396c08926c85882dd641e4ac4af929e" %}
+{% set sha256 = "4006ac13c439cba24ba492d3f81ece2adf10f4f4e74ba07f2aca69306f662aa1" %}
 
 package:
    name:  {{ name }}
