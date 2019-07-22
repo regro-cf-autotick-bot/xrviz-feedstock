@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }}  -m pip install . --no-deps --ignore-installed -vv"
 
@@ -26,8 +26,11 @@ requirements:
     - xarray
     - cartopy
     - panel >=0.5.1
+    - holoviews ==1.12.1
     - hvplot
     - netcdf4
+    - datashader
+    - metpy
 
 test:
   imports:
