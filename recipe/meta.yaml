@@ -1,6 +1,6 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 {% set name = "xrviz" %}
-{% set sha256 = "4006ac13c439cba24ba492d3f81ece2adf10f4f4e74ba07f2aca69306f662aa1" %}
+{% set sha256 = "3a85544f1f8737c0f5c5633de63f40195d31d29a45453267956f608448ce9fb0" %}
 
 package:
    name:  {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }}  -m pip install . --no-deps --ignore-installed -vv"
 
