@@ -23,9 +23,9 @@ requirements:
     - jinja2
   run:
     - python >=3.6
-    - xarray
+    - xarray >=0.14.1
     - cartopy
-    - panel >=0.5.1
+    - panel >=0.7.0
     - holoviews
     - hvplot
     - netcdf4
