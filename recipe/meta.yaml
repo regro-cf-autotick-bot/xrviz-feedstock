@@ -9,7 +9,7 @@ source:
   sha256: 65deb63b695f4edcfa5d4eb85319c0f48ac43e2fbc796f7b8fd3e52be2261206
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -20,9 +20,9 @@ requirements:
     - jinja2
   run:
     - python >=3.6
-    - xarray
+    - xarray >=0.14.1
     - cartopy
-    - panel >=0.5.1
+    - panel >=0.7.0
     - holoviews
     - hvplot
     - netcdf4
