@@ -3,18 +3,17 @@
 {% set sha256 = "65deb63b695f4edcfa5d4eb85319c0f48ac43e2fbc796f7b8fd3e52be2261206" %}
 
 package:
-   name:  {{ name }}
+   name:  xrviz
    version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/x/xrviz/xrviz-{{ version }}.tar.gz
+  sha256: 65deb63b695f4edcfa5d4eb85319c0f48ac43e2fbc796f7b8fd3e52be2261206
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }}  -m pip install . --no-deps --ignore-installed -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
