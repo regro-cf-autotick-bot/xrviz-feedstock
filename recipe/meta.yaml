@@ -5,11 +5,11 @@ package:
    version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/x/xrviz/xrviz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/x/xrviz/xrviz-{{ version }}.tar.gz
   sha256: 65deb63b695f4edcfa5d4eb85319c0f48ac43e2fbc796f7b8fd3e52be2261206
 
 build:
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - xrviz = xrviz.cli:main
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - jinja2
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - xarray >=0.14.1
     - cartopy
     - panel >=0.7.0
@@ -40,6 +40,7 @@ test:
     - xrviz --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/intake/xrviz
